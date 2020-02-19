@@ -8,11 +8,11 @@ import java.util.List;
 
 public interface Inventory {
 
-    FilmDTO addFilm(FilmDTO film);
+    Film addFilm(FilmDTO film);
 
     void removeFilm(Long filmId);
 
-    FilmDTO changeFilmType(Long filmId, FilmType toType);
+    Film changeFilmType(Long filmId, FilmType toType);
 
     List<FilmDTO> getAllFilms();
 

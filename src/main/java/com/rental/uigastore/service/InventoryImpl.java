@@ -25,9 +25,9 @@ public class InventoryImpl implements Inventory {
     }
 
     @Override
-    public FilmDTO addFilm(FilmDTO filmDTO) {
+    public Film addFilm(FilmDTO filmDTO) {
         Film savedFilm = filmRepository.save(DtoToEntityUtil.convertFilmDtoToEntity(filmDTO));
-        return EntityToDtoUtil.convertFilmToDto(savedFilm);
+        return savedFilm;
     }
 
     @Override
@@ -41,7 +41,7 @@ public class InventoryImpl implements Inventory {
     }
 
     @Override
-    public FilmDTO changeFilmType(Long filmId, FilmType toType) {
+    public Film changeFilmType(Long filmId, FilmType toType) {
         Optional<Film> optionalFilm = filmRepository.getById(filmId);
 
         if (optionalFilm.isEmpty()) {
@@ -52,7 +52,7 @@ public class InventoryImpl implements Inventory {
         exisitingFilm.setType(toType);
 
         Film updatedFilm = filmRepository.save(exisitingFilm);
-        return EntityToDtoUtil.convertFilmToDto(updatedFilm);
+        return updatedFilm;
     }
 
     @Override
