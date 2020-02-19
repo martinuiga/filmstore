@@ -63,7 +63,7 @@ public class InventoryImpl implements Inventory {
 
     @Override
     public List<FilmDTO> getAllAvailableFilms() {
-        List<Film> allAvailableFilms = filmRepository.findAll();
+        List<Film> allAvailableFilms = filmRepository.getAllByAvailable(true);
         return allAvailableFilms.stream().map(EntityToDtoUtil::convertFilmToDto).collect(Collectors.toList());
     }
 }
