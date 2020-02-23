@@ -15,12 +15,12 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
-public class InventoryImpl implements Inventory {
+public class InventoryServiceImpl implements InventoryService {
 
     private final FilmRepository filmRepository;
 
     @Autowired
-    public InventoryImpl(FilmRepository filmRepository) {
+    public InventoryServiceImpl(FilmRepository filmRepository) {
         this.filmRepository = filmRepository;
     }
 
@@ -65,5 +65,30 @@ public class InventoryImpl implements Inventory {
     public List<FilmDTO> getAllAvailableFilms() {
         List<Film> allAvailableFilms = filmRepository.getAllByAvailable(true);
         return allAvailableFilms.stream().map(EntityToDtoUtil::convertFilmToDto).collect(Collectors.toList());
+    }
+
+    @Override
+    public FilmDTO setFilmAvailability(Long filmId, boolean available) {
+        Optional<Film> filmOptional = filmRepository.findById(filmId);
+
+        if (filmOptional.isEmpty()) {
+            throw new NoSuchElementException();
+        }
+
+        Film film = filmOptional.get();
+        film.setAvailable(available);
+        return EntityToDtoUtil.convertFilmToDto(filmRepository.save(film));
+    }
+
+    @Override
+    public FilmDTO getFilm(Long filmId) {
+        Optional<Film> filmOptional = filmRepository.findById(filmId);
+
+        if (filmOptional.isEmpty()) {
+            throw new NoSuchElementException();
+        }
+
+        Film film = filmOptional.get();
+        return EntityToDtoUtil.convertFilmToDto(film);
     }
 }

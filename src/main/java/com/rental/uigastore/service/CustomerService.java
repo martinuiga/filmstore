@@ -8,4 +8,6 @@ public interface CustomerService {
     Customer createCustomer(CustomerDTO customerDTO);
 
     CustomerDTO showCustomer(Long id);
+
+    CustomerDTO removeCustomerBonuspoints(Long customerId, Integer bonusDays);
 }

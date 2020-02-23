@@ -6,7 +6,7 @@ import com.rental.uigastore.util.FilmType;
 
 import java.util.List;
 
-public interface Inventory {
+public interface InventoryService {
 
     Film addFilm(FilmDTO film);
 
@@ -17,4 +17,8 @@ public interface Inventory {
     List<FilmDTO> getAllFilms();
 
     List<FilmDTO> getAllAvailableFilms();
+
+    FilmDTO setFilmAvailability(Long filmId, boolean available);
+
+    FilmDTO getFilm(Long filmId);
 }

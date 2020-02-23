@@ -1,8 +1,12 @@
 package com.rental.uigastore.service;
 
+import com.rental.uigastore.request.RentalPeriodRequest;
+
+import java.util.List;
+
 public interface RentalService {
 
-    void rentMovie(Long filmId, Long customerId);
+    Integer rentMovies(List<RentalPeriodRequest> rentals, Long customerId, Boolean useBonusPoints);
 
-    void returnMovie(Long filmId, Long customerId);
+    Integer returnMovie(List<Long> filmIds, Long customerId);
 }

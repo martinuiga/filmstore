@@ -8,7 +8,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class FilmDTO {
 
-    private Integer price;
     private String name;
     private FilmType type;
     private Boolean available;

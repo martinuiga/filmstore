@@ -2,7 +2,7 @@ package com.rental.uigastore.controller;
 
 import com.rental.uigastore.dto.FilmDTO;
 import com.rental.uigastore.model.Film;
-import com.rental.uigastore.service.Inventory;
+import com.rental.uigastore.service.InventoryService;
 import com.rental.uigastore.util.FilmType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -15,10 +15,10 @@ import java.util.List;
 @RequestMapping("/inventory")
 public class InventoryController {
 
-    private final Inventory inventoryService;
+    private final InventoryService inventoryService;
 
     @Autowired
-    public InventoryController(Inventory inventoryService) {
+    public InventoryController(InventoryService inventoryService) {
         this.inventoryService = inventoryService;
     }
 

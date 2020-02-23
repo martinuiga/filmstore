@@ -18,7 +18,6 @@ public class Film {
     @Id
     @GeneratedValue
     private Long id;
-    private Integer price;
     private String name;
     private FilmType type;
     private Boolean available;

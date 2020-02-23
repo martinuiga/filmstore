@@ -21,7 +21,4 @@ public class Customer {
     private Long id;
     private Integer bonusPoints;
     private String name;
-
-    @OneToMany
-    private List<Film> films;
 }
