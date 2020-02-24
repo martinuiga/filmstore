@@ -8,5 +8,5 @@ public interface RentalService {
 
     Integer rentMovies(List<RentalPeriodRequest> rentals, Long customerId, Boolean useBonusPoints);
 
-    Integer returnMovie(List<Long> filmIds, Long customerId);
+    Integer returnMovies(List<Long> filmIds, Long customerId);
 }

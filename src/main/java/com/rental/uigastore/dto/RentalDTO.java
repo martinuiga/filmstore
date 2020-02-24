@@ -2,7 +2,7 @@ package com.rental.uigastore.dto;
 
 import lombok.Data;
 
-import java.sql.Timestamp;
+import java.time.LocalDate;
 
 @Data
 public class RentalDTO {
@@ -10,6 +10,5 @@ public class RentalDTO {
     private Long filmId;
     private Long customerId;
     private Integer initialRentalPeriod;
-    private Timestamp rentalStart;
-    private Timestamp rentalEnd;
+    private LocalDate rentalEnd;
 }

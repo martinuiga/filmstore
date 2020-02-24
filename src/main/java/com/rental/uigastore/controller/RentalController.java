@@ -13,7 +13,6 @@ import java.util.List;
 @RequestMapping("/rental")
 public class RentalController {
 
-
     private final RentalService rentalService;
 
     @Autowired
@@ -21,7 +20,6 @@ public class RentalController {
         this.rentalService = rentalService;
     }
 
-    // Long customerId, Integer rentalLength, Boolean useBonusPoints
     @PostMapping("/rent_movies")
     public ResponseEntity<Integer> rentMovies(@RequestBody List<RentalPeriodRequest> rentals,
                                               @RequestParam(name = "customerId") Long customerId,
@@ -30,5 +28,10 @@ public class RentalController {
         return new ResponseEntity<>(totalPrice, HttpStatus.OK);
     }
 
-    // upon rental says for how many days, when returning then request how many days were late or not
+    @PostMapping("/return_movies")
+    public ResponseEntity<Integer> returnMovies(@RequestBody List<Long> rentalIds,
+                                                @RequestParam(name = "customerId") Long customerId) {
+        Integer totalPrice = rentalService.returnMovies(rentalIds, customerId);
+        return new ResponseEntity<>(totalPrice, HttpStatus.OK);
+    }
 }

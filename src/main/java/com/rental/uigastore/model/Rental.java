@@ -5,7 +5,7 @@ import lombok.Data;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import java.sql.Timestamp;
+import java.time.LocalDate;
 
 @Entity
 @Data
@@ -17,6 +17,5 @@ public class Rental {
     private Long filmId;
     private Long customerId;
     private Integer initialRentalPeriod;
-    private Timestamp rentalStart;
-    private Timestamp rentalEnd;
+    private LocalDate rentalEnd;
 }

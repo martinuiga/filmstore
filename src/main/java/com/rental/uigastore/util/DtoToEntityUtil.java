@@ -28,7 +28,6 @@ public class DtoToEntityUtil {
         Rental rental = new Rental();
         rental.setCustomerId(rentalDTO.getCustomerId());
         rental.setFilmId(rentalDTO.getFilmId());
-        rental.setRentalStart(rentalDTO.getRentalStart());
         rental.setRentalEnd(rentalDTO.getRentalEnd());
         return rental;
     }
