@@ -35,6 +35,7 @@ public class RentalServiceImpl implements RentalService {
 
     @Override
     public Integer rentMovies(List<RentalPeriodRequest> rentals, Long customerId, Boolean useBonusPoints) {
+        LOGGER.info("rentMovies(): rentalRequests={}, customerId={}, useBonusPoints={}", rentals, customerId, useBonusPoints);
         int totalPrice = 0;
 
         for (RentalPeriodRequest rental : rentals) {
@@ -64,9 +65,9 @@ public class RentalServiceImpl implements RentalService {
                 int filmPrice = CalculationUtil.calculateRentalPrice(film.getType(), rental.getRentalLength() - bonusDays);
                 totalPrice += filmPrice;
 
-                inventoryService.setFilmAvailability(rental.getFilmId(), false);
                 customerService.removeCustomerBonuspoints(customerId, bonusDays);
                 rentalRepository.save(DtoToEntityUtil.convertRentalDtoToEntity(rentalDTO));
+                inventoryService.setFilmAvailability(rental.getFilmId(), false);
 
                 LOGGER.info("{} ({}) {} days {} EUR (Paid with {} bonus points)", film.getName(), film.getType(),
                         rental.getRentalLength(), filmPrice, bonusDays * 25);
@@ -74,6 +75,7 @@ public class RentalServiceImpl implements RentalService {
                 int filmPrice = CalculationUtil.calculateRentalPrice(film.getType(), rental.getRentalLength());
                 totalPrice += filmPrice;
                 rentalRepository.save(DtoToEntityUtil.convertRentalDtoToEntity(rentalDTO));
+                inventoryService.setFilmAvailability(rental.getFilmId(), false);
 
                 LOGGER.info("{} ({}) {} days {} EUR", film.getName(), film.getType(), rental.getRentalLength(), filmPrice);
             }
@@ -84,6 +86,7 @@ public class RentalServiceImpl implements RentalService {
 
     @Override
     public Integer returnMovies(List<Long> rentalIds, Long customerId) {
+        LOGGER.info("returnMovies(): rentalIds={}, customerId={}", rentalIds, customerId);
         int totalPrice = 0;
 
         for (Long rentalId : rentalIds) {

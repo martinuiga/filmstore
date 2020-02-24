@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3b09263f-a596-4b09-ac10-2aff1f62d2ef" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rental/uigastore/controller/RentalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rental/uigastore/controller/RentalController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rental/uigastore/dto/RentalDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rental/uigastore/dto/RentalDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rental/uigastore/model/Rental.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rental/uigastore/model/Rental.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rental/uigastore/service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rental/uigastore/service/CustomerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rental/uigastore/service/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rental/uigastore/service/CustomerServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rental/uigastore/service/InventoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rental/uigastore/service/InventoryServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rental/uigastore/service/RentalService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rental/uigastore/service/RentalService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/rental/uigastore/service/RentalServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rental/uigastore/service/RentalServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rental/uigastore/util/DtoToEntityUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rental/uigastore/util/DtoToEntityUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uigastore.iml" beforeDir="false" afterPath="$PROJECT_DIR$/uigastore.iml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -34,7 +23,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/rental/uigastore/service/InventoryServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1496">
+            <state relative-caret-position="191">
               <caret line="90" column="93" selection-start-line="90" selection-start-column="93" selection-end-line="90" selection-end-column="93" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -58,8 +47,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/rental/uigastore/service/RentalServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="44" column="87" lean-forward="true" selection-start-line="44" selection-start-column="87" selection-end-line="44" selection-end-column="87" />
+            <state relative-caret-position="-24">
+              <caret line="77" column="80" selection-start-line="77" selection-start-column="80" selection-end-line="77" selection-end-column="80" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -114,10 +103,10 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/rental/uigastore/util/DtoToEntityUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rental/uigastore/service/CustomerService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rental/uigastore/service/RentalServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rental/uigastore/controller/RentalController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rental/uigastore/service/CustomerServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rental/uigastore/service/InventoryServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rental/uigastore/service/RentalServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -308,18 +297,17 @@
       <updated>1582050637632</updated>
       <workItem from="1582050642214" duration="2308000" />
       <workItem from="1582052993500" duration="1303000" />
-      <workItem from="1582136083064" duration="18548000" />
+      <workItem from="1582136083064" duration="18957000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22159000" />
+    <option name="totallyTimeSpent" value="22568000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49945828" visible="true" weight="0.2153518" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49945828" weight="0.4420131" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -329,7 +317,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3261105" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3261105" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -629,16 +617,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rental/uigastore/service/InventoryServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1496">
-          <caret line="90" column="93" selection-start-line="90" selection-start-column="93" selection-end-line="90" selection-end-column="93" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/rental/uigastore/controller/RentalController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -649,10 +627,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rental/uigastore/service/InventoryServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="90" column="93" selection-start-line="90" selection-start-column="93" selection-end-line="90" selection-end-column="93" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/rental/uigastore/service/RentalServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="44" column="87" lean-forward="true" selection-start-line="44" selection-start-column="87" selection-end-line="44" selection-end-column="87" />
+        <state relative-caret-position="-24">
+          <caret line="77" column="80" selection-start-line="77" selection-start-column="80" selection-end-line="77" selection-end-column="80" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
