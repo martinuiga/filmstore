@@ -1,6 +1,7 @@
 package com.rental.uigastore.service;
 
 import com.rental.uigastore.dto.FilmDTO;
+import com.rental.uigastore.exception.ResourceNotFoundException;
 import com.rental.uigastore.model.Film;
 import com.rental.uigastore.repository.FilmRepository;
 import com.rental.uigastore.util.DtoToEntityUtil;
@@ -12,7 +13,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.NoSuchElementException;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
@@ -42,7 +42,7 @@ public class InventoryServiceImpl implements InventoryService {
 
         if (film.isEmpty()) {
             LOGGER.error("removeFilm(): filmId={} not found", filmId);
-            throw new NoSuchElementException();
+            throw new ResourceNotFoundException("Film not found");
         }
         LOGGER.info("removeFilm(): film removed={}", film.get());
         filmRepository.delete(film.get());
@@ -55,7 +55,7 @@ public class InventoryServiceImpl implements InventoryService {
 
         if (optionalFilm.isEmpty()) {
             LOGGER.error("changeFilmType(): filmId={} not found", filmId);
-            throw new NoSuchElementException();
+            throw new ResourceNotFoundException("Film not found");
         }
 
         Film exisitingFilm = optionalFilm.get();
@@ -83,7 +83,7 @@ public class InventoryServiceImpl implements InventoryService {
 
         if (filmOptional.isEmpty()) {
             LOGGER.error("setFilmAvailability(): filmId={} not found", filmId);
-            throw new NoSuchElementException();
+            throw new ResourceNotFoundException("Film not found");
         }
 
         Film film = filmOptional.get();
@@ -97,7 +97,7 @@ public class InventoryServiceImpl implements InventoryService {
         Optional<Film> filmOptional = filmRepository.findById(filmId);
 
         if (filmOptional.isEmpty()) {
-            throw new NoSuchElementException();
+            throw new ResourceNotFoundException("Film not found");
         }
 
         return EntityToDtoUtil.convertFilmToDto(filmOptional.get());

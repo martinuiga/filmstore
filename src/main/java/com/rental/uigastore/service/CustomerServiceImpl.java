@@ -1,6 +1,7 @@
 package com.rental.uigastore.service;
 
 import com.rental.uigastore.dto.CustomerDTO;
+import com.rental.uigastore.exception.ResourceNotFoundException;
 import com.rental.uigastore.model.Customer;
 import com.rental.uigastore.repository.CustomerRepository;
 import com.rental.uigastore.util.DtoToEntityUtil;
@@ -10,7 +11,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.NoSuchElementException;
 import java.util.Optional;
 
 @Service
@@ -39,7 +39,7 @@ public class CustomerServiceImpl implements CustomerService {
 
         if (customer.isEmpty()) {
             LOGGER.error("showCustomer(): customer not found={}", id);
-            throw new NoSuchElementException();
+            throw new ResourceNotFoundException("Customer not found");
         }
 
         LOGGER.info("showCustomer(): found customer={}", customer.get());
