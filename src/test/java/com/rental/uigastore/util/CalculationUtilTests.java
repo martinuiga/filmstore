@@ -1,10 +1,10 @@
 package com.rental.uigastore.util;
 
-import static org.junit.Assert.assertEquals;
-
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.junit4.SpringRunner;
+
+import static org.junit.Assert.assertEquals;
 
 @RunWith(SpringRunner.class)
 public class CalculationUtilTests {
@@ -32,5 +32,15 @@ public class CalculationUtilTests {
     @Test
     public void calculationWithRegularMoreThan5Days() {
         assertEquals(9, CalculationUtil.calculateRentalPrice(FilmType.REGULAR, 7));
+    }
+
+    @Test
+    public void calculationWithRegularNegativeDays() {
+        assertEquals(0, CalculationUtil.calculateRentalPrice(FilmType.REGULAR, -1));
+    }
+
+    @Test
+    public void calculationWithRegularZeroDays() {
+        assertEquals(0, CalculationUtil.calculateRentalPrice(FilmType.REGULAR, 0));
     }
 }
